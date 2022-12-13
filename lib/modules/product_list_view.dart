@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:navrouterdemo/core/app_router.dart';
-// import 'package:navrouterdemo/core/extensions/context.dart';
+import 'package:navrouterdemo/core/extensions/context.dart';
 import 'package:navrouterdemo/core/models/product.dart';
-// import 'package:navrouterdemo/core/router.dart';
+import 'package:navrouterdemo/core/router.dart';
 
 class ProductListView extends StatelessWidget {
   const ProductListView({super.key});
@@ -21,8 +19,8 @@ class ProductListView extends StatelessWidget {
           for (final Product product in products)
             ListTile(
               onTap: () {
-                // context.go(RouteName.productDetail);
-                context.goNamed(AppRouteName.productDetail);
+                context.go(RouteName.productDetail);
+                // context.goNamed(AppRouteName.productDetail);
               },
               title: Text(product.name),
             ),

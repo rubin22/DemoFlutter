@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:navrouterdemo/core/app_router.dart';
-// import 'package:navrouterdemo/core/router.dart';
+// import 'package:navrouterdemo/core/app_router.dart';
+import 'package:navrouterdemo/core/router.dart';
 
 class ProductDetailView extends StatelessWidget {
   const ProductDetailView({super.key});
@@ -15,9 +14,9 @@ class ProductDetailView extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Navigator.pushNamedAndRemoveUntil(
-            //     context, RouteName.login, (route) => false);
-            context.goNamed(AppRouteName.login);
+            Navigator.pushNamedAndRemoveUntil(
+                context, RouteName.login, (route) => false);
+            // context.goNamed(AppRouteName.login);
           },
           child: const Text('Logout'),
         ),

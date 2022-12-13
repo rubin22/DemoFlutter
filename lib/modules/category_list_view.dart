@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:navrouterdemo/core/router.dart';
-// import 'package:navrouterdemo/core/extensions/context.dart';
-import 'package:go_router/go_router.dart';
-import 'package:navrouterdemo/core/app_router.dart';
+import 'package:navrouterdemo/core/extensions/context.dart';
 import 'package:navrouterdemo/core/models/category.dart';
+import 'package:navrouterdemo/core/router.dart';
 
 class CategoryListView extends StatelessWidget {
   const CategoryListView({super.key});
@@ -16,8 +14,8 @@ class CategoryListView extends StatelessWidget {
         title: const Text('All Categories'),
         leading: IconButton(
           onPressed: () {
-            // context.go(RouteName.about);
-            context.goNamed(AppRouteName.about);
+            context.go(RouteName.about);
+            // context.goNamed(AppRouteName.about);
           },
           icon: const Icon(Icons.info_outline),
         ),
@@ -28,8 +26,8 @@ class CategoryListView extends StatelessWidget {
           final category = categories[index];
           return ListTile(
             onTap: () {
-              // context.go(RouteName.productList);
-              context.goNamed(AppRouteName.productList);
+              context.go(RouteName.productList);
+              // context.goNamed(AppRouteName.productList);
             },
             title: Text(category.name),
           );
